@@ -65,7 +65,13 @@ const Navbar = () => {
         </li>
       </ul>
 
-      <button className="btn">Download Resume</button>
+      <a
+        href="https://drive.google.com/file/d/1hBXVEL4bnNocLDWV1kbVEAgZ_V78bH2D/view?usp=sharing"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <button className="btn">Download Resume</button>
+      </a>
     </nav>
   );
 };
