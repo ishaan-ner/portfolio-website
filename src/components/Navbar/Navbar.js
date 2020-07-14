@@ -1,4 +1,5 @@
 import React from "react";
+import "./navbar.styles.scss";
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
@@ -11,7 +12,7 @@ const Navbar = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i className="fab fa-github" style={{ color: "white" }}></i>
+            <i className="fab fa-github"></i>
           </a>
         </li>
         <li className="social-icon">
@@ -20,12 +21,12 @@ const Navbar = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i className="fab fa-linkedin" style={{ color: "#0077b5" }}></i>
+            <i className="fab fa-linkedin"></i>
           </a>
         </li>
         <li className="social-icon">
           <a href="mailto: ishaan.ner@gmail.com">
-            <i class="fas fa-envelope-square" style={{ color: "#ffb3b3" }}></i>
+            <i className="fas fa-envelope-square"></i>
           </a>
         </li>
       </ul>
@@ -34,7 +35,7 @@ const Navbar = () => {
           <NavLink
             exact={true}
             to="/"
-            activeStyle={{ fontWeight: "700", color: "white" }}
+            activeStyle={{ fontWeight: "700", color: " #39b08d" }}
           >
             About
           </NavLink>
@@ -42,7 +43,7 @@ const Navbar = () => {
         <li>
           <NavLink
             to="/projects"
-            activeStyle={{ fontWeight: "700", color: "white" }}
+            activeStyle={{ fontWeight: "700", color: " #39b08d" }}
           >
             Projects
           </NavLink>
@@ -50,17 +51,9 @@ const Navbar = () => {
         <li>
           <NavLink
             to="/skills"
-            activeStyle={{ fontWeight: "700", color: "white" }}
+            activeStyle={{ fontWeight: "700", color: " #39b08d" }}
           >
             Skills
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/contact"
-            activeStyle={{ fontWeight: "700", color: "white" }}
-          >
-            Contact
           </NavLink>
         </li>
       </ul>

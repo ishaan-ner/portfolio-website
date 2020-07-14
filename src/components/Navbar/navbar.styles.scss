@@ -1,0 +1,44 @@
+@import "../../master-styles";
+
+.navbar {
+  background-color: $bg-dark;
+  display: flex;
+  width: 100%;
+  height: 4rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 2rem;
+  ul li {
+    display: inline-block;
+    margin: 0 1rem;
+    transition: all 0.5s ease;
+    &:hover {
+      color: $text-primary;
+    }
+  }
+  .social-list {
+    li {
+      font-size: 2.2rem;
+      transition: all 1s ease;
+      &:hover {
+        transform: scale(1.1);
+        color: $text-highlight;
+      }
+    }
+  }
+  .nav-list {
+    li {
+      letter-spacing: 2px;
+      font-size: 1rem;
+      border: 1px solid transparent;
+      color: $text-primary;
+      &:hover {
+        border-bottom: 1px solid $text-highlight;
+      }
+    }
+  }
+
+  button {
+    box-shadow: $box-shadow-small;
+  }
+}

@@ -12,16 +12,17 @@ const Skills = () => {
   ];
 
   const reactSkills = [
-    "React Concepts:",
+    "React Skills:",
     "Hooks",
     "Context API",
     "lifecycle Methods",
-    "Axios fetch requests",
+    "Axios ",
     "REDUX",
+    "Formik",
   ];
 
   const styling = [
-    "Advanced Styling:",
+    "Styling:",
     "Bootstrap",
     "SASS",
     "Material UI",
@@ -29,16 +30,13 @@ const Skills = () => {
     "Tailwind CSS",
   ];
 
-  const requests = [
-    "REST APIs and HTTP Requests:",
-    "AJAX",
-    "fetch API",
-    "GraphQL/Apollo",
-  ];
+  const cloudServices = ["Cloud Services:", "Firebase", "Heroku"];
 
   const versionControl = ["Version Control:", "Git", "GitHub"];
 
   const packageManagers = ["Package Managers:", "NPM", "Yarn"];
+
+  const testing = ["Testing:", "JEST"];
 
   return (
     <section className="skills">
@@ -65,7 +63,7 @@ const Skills = () => {
           ))}
         </p>
         <p>
-          {requests.map((item) => (
+          {cloudServices.map((item) => (
             <span key={item}>{item}</span>
           ))}
         </p>
@@ -76,6 +74,11 @@ const Skills = () => {
         </p>
         <p>
           {packageManagers.map((item) => (
+            <span key={item}>{item}</span>
+          ))}
+        </p>
+        <p>
+          {testing.map((item) => (
             <span key={item}>{item}</span>
           ))}
         </p>

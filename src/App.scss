@@ -1,14 +1,4 @@
-$bg-dark: #242424;
-$bg-medium: #2f2f2f;
-$bg-cool: #009688;
-$bg-warm: #cc181f;
-$text-primary: #cacaca;
-$text-secondary: #8a8a8a;
-$font-primary: "Montserrat", sans-serif;
-$font-secondary: "Lato", sans-serif;
-$text-highlight: #ebf1f8;
-$box-shadow-small: 6px 7px 27px 6px rgba(0, 0, 0, 0.75);
-$box-shadow-large: 7px 8px 17px 7px rgba(0, 0, 0, 0.72);
+@import "master-styles.scss";
 
 * {
   box-sizing: border-box;
@@ -18,21 +8,7 @@ body {
   margin: 0;
   color: $text-primary;
   font-family: $font-primary;
-  background: linear-gradient(-45deg, black, $bg-dark, $bg-medium, #001a1a);
-  background-size: 600% 600%;
-  animation: gradient 10s ease infinite;
-}
-
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  background-color: $bg-dark;
 }
 
 .App {
@@ -52,69 +28,26 @@ a {
 
 section {
   height: calc(100% - 4rem);
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .btn {
   border-radius: 3px;
-  border: none;
-  padding: 0.4rem 0.6rem;
-  color: $text-highlight;
-  background-color: $bg-cool;
+  border: 1px solid $bg-highlight;
+  padding: 0.4rem 0.8rem;
+  color: $bg-highlight;
+  background: $bg-dark;
   font-family: $font-secondary;
   font-size: 1rem;
   cursor: pointer;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.2s ease-in-out;
   &:focus {
     outline: none;
   }
   &:hover {
-    background-color: #00ccb8;
-  }
-}
-
-.navbar {
-  background-color: $bg-dark;
-  display: flex;
-  width: 100%;
-  height: 4rem;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.5rem 2rem;
-  ul li {
-    display: inline-block;
-    margin: 0 1rem;
-    transition: all 0.5s ease;
-
-    &:hover {
-      color: white;
-    }
-  }
-  .social-list {
-    li {
-      font-size: 2rem;
-      &:hover {
-        transform: scale(1.2);
-      }
-    }
-  }
-  .nav-list {
-    li {
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      border: 1px solid transparent;
-      &:hover {
-        border-bottom: 1px solid $text-highlight;
-      }
-    }
-  }
-
-  button {
-    box-shadow: $box-shadow-small;
-    transition: all 0.1s;
-    &:hover,
-    &:focus {
-      transform: translateY(-0.1em);
-    }
+    background-color: $bg-highlight;
+    color: white;
   }
 }
 
@@ -128,29 +61,62 @@ section {
   }
 }
 
+.projects {
+  h2 {
+    position: relative;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100%;
+    white-space: nowrap;
+    font-size: 28px;
+    margin: 30px 0px 80px;
+    &::after {
+      content: "";
+      display: block;
+      height: 1px;
+      width: 300px;
+      background-color: rgb(48, 60, 85);
+      position: relative;
+      top: -2px;
+      margin-left: 20px;
+    }
+  }
+}
+
 .about {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 0 4rem;
+
+  align-items: flex-start;
+  padding: 50px 50px 150px 50px;
+  h1,
+  h2 {
+    margin: 0;
+    letter-spacing: 1px;
+  }
   h1 {
-    font-size: 3rem;
-    margin-top: 0;
-    color: $text-highlight;
-    & span {
-      color: $bg-cool;
-    }
+    font-size: 4rem;
+    color: $text-primary;
   }
   h2 {
     font-size: 2rem;
     font-family: $font-secondary;
+    color: $text-secondary;
+    margin-bottom: 1rem;
   }
   p {
     color: $text-secondary;
     font-family: $font-secondary;
     font-size: 1.2rem;
+    width: 60%;
+    &:first-of-type {
+      color: $text-highlight;
+    }
+  }
+  button {
+    margin-top: 2rem;
   }
 }
 
@@ -160,7 +126,7 @@ section {
   align-items: center;
   padding: 4rem;
   h2 {
-    color: $text-highlight;
+    color: $text-primary;
   }
   .svg-grid {
     display: grid;
@@ -170,7 +136,7 @@ section {
   .skills-table {
     display: flex;
     margin-top: 2rem;
-    width: 60%;
+    width: 80%;
     flex-direction: column;
     overflow-x: auto;
 
@@ -191,60 +157,6 @@ section {
   }
 }
 
-.projects {
-  h2 {
-    text-align: center;
-    margin: 3rem 0 0 0;
-  }
-  h2,
-  h3,
-  span {
-    color: $text-highlight;
-  }
-
-  span {
-    font-size: 1.1rem;
-    margin-right: 0.5rem;
-  }
-  .project-details {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 70%;
-    margin: 5rem auto;
-    padding: 2rem 0;
-    box-shadow: $box-shadow-large;
-    background-color: $bg-medium;
-  }
-  .project-img {
-    width: 30%;
-    box-shadow: $box-shadow-small;
-    img {
-      object-fit: cover;
-      width: 100%;
-      height: 100%;
-    }
-  }
-  .project-description {
-    width: 60%;
-    font-family: $font-secondary;
-    margin: 2rem 0;
-  }
-  .project-buttons {
-    margin-top: 3rem;
-  }
-
-  button {
-    box-shadow: $box-shadow-small;
-    margin: 0 2rem;
-    color: white;
-    padding: 0.5rem 2rem;
-    &:hover {
-      box-shadow: $box-shadow-large;
-    }
-  }
-}
-
 @media only screen and (max-width: 850px) {
   .btn {
     font-size: 0.8rem;
@@ -259,10 +171,20 @@ section {
       font-size: 1.3rem;
     }
   }
-  .projects {
-    .project-img {
-      width: 50%;
+
+  .about {
+    padding: 0 50px;
+    h1,
+    h2 {
+      font-size: 2rem;
     }
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  .projects {
+    margin: 0 1rem;
   }
 }
 
@@ -272,27 +194,26 @@ section {
   .about {
     margin-top: 10rem;
   }
-  section {
-    height: calc(100% - 10rem);
-  }
+
   .navbar {
     padding: 0;
-    justify-content: space-evenly;
     flex-direction: column;
-    height: 8rem;
-    position: fixed;
-    top: 0;
-    ul li {
+    height: 128px;
+    .nav-list li {
       font-size: 0.8rem;
-      margin: 0 0.5rem;
+      margin: 1rem 0.2rem;
     }
     i {
       font-size: 2rem;
-      margin: 1rem;
+      margin: 0.5rem;
     }
     .btn {
       display: none;
     }
+  }
+
+  .about {
+    justify-content: flex-start;
   }
 
   .skills {
@@ -302,21 +223,23 @@ section {
     }
   }
   .projects {
+    margin: 0 1rem;
     h2 {
-      margin-bottom: 2rem;
+      margin: 4rem 0;
     }
-    h3 {
-      text-align: center;
-    }
+
     .project-details {
-      width: 100%;
-      margin: 1rem 0;
       .project-img {
-        width: 80%;
+        grid-column: 1/-1;
+        opacity: 0.2;
       }
-    }
-    .project-description {
-      width: 90%;
+      .project-description {
+        grid-column: 1 / -1;
+        text-align: right;
+        ul {
+          justify-content: flex-end;
+        }
+      }
     }
   }
   .contact,
