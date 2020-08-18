@@ -2,8 +2,8 @@ import React from "react";
 import "./App.scss";
 import { Route, Switch } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
-import About from "./components/About";
-import Skills from "./components/Skills";
+import About from "./components/About/About";
+import Skills from "./components/Skills/Skills";
 import Projects from "./components/Projects";
 import PageNotFound from "./components/PageNotFound";
 
@@ -14,8 +14,6 @@ function App() {
       <Switch>
         <Route exact path="/">
           <About />
-        </Route>
-        <Route exact path="/skills">
           <Skills />
         </Route>
         <Route exact path="/projects">

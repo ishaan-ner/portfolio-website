@@ -5,6 +5,28 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
   return (
     <nav className="navbar">
+      <ul className="nav-list">
+        <li>
+          <NavLink
+            exact={true}
+            to="/"
+            activeStyle={{ fontWeight: "700", color: " #39b08d" }}
+          >
+            Home
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/projects"
+            activeStyle={{ fontWeight: "700", color: " #39b08d" }}
+          >
+            Projects
+          </NavLink>
+        </li>
+        <li>
+          <a href="#skills"> Skills</a>
+        </li>
+      </ul>
       <ul className="social-list">
         <li className="social-icon">
           <a
@@ -30,41 +52,6 @@ const Navbar = () => {
           </a>
         </li>
       </ul>
-      <ul className="nav-list">
-        <li>
-          <NavLink
-            exact={true}
-            to="/"
-            activeStyle={{ fontWeight: "700", color: " #39b08d" }}
-          >
-            About
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/projects"
-            activeStyle={{ fontWeight: "700", color: " #39b08d" }}
-          >
-            Projects
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/skills"
-            activeStyle={{ fontWeight: "700", color: " #39b08d" }}
-          >
-            Skills
-          </NavLink>
-        </li>
-      </ul>
-
-      <a
-        href="https://drive.google.com/file/d/1U0Bm-XBccArtY8rAPMcRMF4QzlL6B_2G/view?usp=sharing"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <button className="btn">Download Resume</button>
-      </a>
     </nav>
   );
 };

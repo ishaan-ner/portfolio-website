@@ -1,0 +1,57 @@
+@import "../../master-styles";
+
+.skills {
+  max-width: unset;
+  padding-top: 40px;
+  h1 {
+    color: $text-primary;
+    text-align: center;
+    font-size: 2rem;
+  }
+  .svg-grid {
+    display: flex;
+    justify-content: center;
+  }
+
+  .skills-table {
+    display: grid;
+    margin-top: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    width: 80%;
+    margin: 50px auto;
+    p {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      font-family: $font-secondary;
+      color: $text-primary;
+      letter-spacing: 1px;
+      border-radius: 5px;
+      border: 1px solid $text-secondary;
+      height: 300px;
+    }
+
+    span {
+      margin: 10px 0;
+    }
+
+    .skill-heading {
+      color: $text-highlight;
+      font-size: 1.2rem;
+    }
+  }
+
+  @media only screen and (max-width: 800px) {
+    margin-top: 10rem;
+    padding: 2rem 0;
+    .svg-grid {
+      flex-wrap: wrap;
+    }
+    .skills-table {
+      width: 100%;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}

@@ -1,0 +1,75 @@
+@import "../../master-styles";
+
+.about {
+  display: flex;
+  .about-me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 60%;
+  }
+
+  .about-buttons {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h1 {
+    margin: 0;
+    letter-spacing: 1px;
+    font-size: 4rem;
+    color: $text-primary;
+  }
+
+  p {
+    color: $text-secondary;
+    font-family: $font-secondary;
+    font-size: 1.5rem;
+    width: 60%;
+    &:first-of-type {
+      color: $text-highlight;
+    }
+  }
+
+  .about-btn {
+    background-color: transparent;
+    border: 2px solid $text-highlight;
+    border-radius: 5px;
+    padding: 60px;
+    margin: 40px 0;
+    font-size: 2rem;
+    color: $text-highlight;
+    cursor: pointer;
+    box-shadow: $box-shadow-small;
+    transition: all 0.5s ease;
+    i {
+      display: block;
+    }
+
+    &:hover {
+      background: $text-highlight;
+      color: $text-primary;
+      box-shadow: $box-shadow-large;
+    }
+  }
+
+  @media only screen and (max-width: 850px) {
+    padding: 0 50px;
+    h1,
+    h2 {
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  @media only screen and (max-width: 670px) {
+    margin-top: 10rem;
+    justify-content: flex-start;
+  }
+}
