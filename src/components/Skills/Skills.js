@@ -2,7 +2,7 @@ import React from "react";
 import { svgArray } from "../../assets/svgs";
 import "./skills.styles.scss";
 
-const Skills = () => {
+const Skills = ({ scrollTop }) => {
   const allSkills = {
     coreFrontEnd: ["HTML5", "CSS3", "Javascript", "jQuery", "React"],
     reactEcosystem: ["REDUX", "React-Router", "Hooks", "Axios ", "Apollo"],
@@ -22,7 +22,13 @@ const Skills = () => {
 
   return (
     <section className="skills" id="skills">
-      <h1>My Tech-Stack Includes</h1>
+      <div className="scroll-btn" onClick={scrollTop}>
+        Home
+        <span>
+          <i className="fas fa-chevron-up"></i>
+        </span>
+      </div>
+
       <div className="svg-grid">
         {svgArray.map((item, index) => (
           <span key={index}>{item.svg}</span>

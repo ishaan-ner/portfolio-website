@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./about.styles.scss";
 
-const About = () => {
+const About = ({ scrollBottom }) => {
   return (
     <section className="about">
       <div className="about-me">
@@ -30,6 +30,12 @@ const About = () => {
             <i className="far fa-file"></i> Resume
           </button>
         </a>
+      </div>
+      <div className="scroll-btn" onClick={scrollBottom}>
+        Skills
+        <span>
+          <i className="fas fa-chevron-down"></i>
+        </span>
       </div>
     </section>
   );

@@ -16,15 +16,12 @@ const Navbar = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink
+          {/* <NavLink
             to="/projects"
             activeStyle={{ fontWeight: "700", color: " #39b08d" }}
           >
             Projects
-          </NavLink>
-        </li>
-        <li>
-          <a href="#skills"> Skills</a>
+          </NavLink> */}
         </li>
       </ul>
       <ul className="social-list">
@@ -35,6 +32,7 @@ const Navbar = () => {
             rel="noopener noreferrer"
           >
             <i className="fab fa-github"></i>
+            <p className="icon-name">GitHub</p>
           </a>
         </li>
         <li className="social-icon">
@@ -44,11 +42,13 @@ const Navbar = () => {
             rel="noopener noreferrer"
           >
             <i className="fab fa-linkedin"></i>
+            <p className="icon-name">LinkedIn</p>
           </a>
         </li>
         <li className="social-icon">
           <a href="mailto: ishaan.ner@gmail.com">
             <i className="fas fa-envelope-square"></i>
+            <p className="icon-name">Email</p>
           </a>
         </li>
       </ul>

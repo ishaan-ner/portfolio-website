@@ -1,6 +1,7 @@
 import React from "react";
-import { projects } from "../projectsData";
-import ProjectDetails from "./ProjectDetails/ProjectDetails";
+import "./projects.styles.scss";
+import { projects } from "../../projectsData";
+import ProjectDetails from "../ProjectDetails/ProjectDetails";
 
 const Projects = () => {
   return (

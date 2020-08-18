@@ -9,6 +9,7 @@ body {
   color: $text-primary;
   font-family: $font-primary;
   background-color: $bg-dark;
+  overflow-y: hidden;
 }
 
 ul {
@@ -23,7 +24,7 @@ a {
 }
 
 section {
-  height: 100vh;
+  height: calc(100vh - 4rem);
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -37,91 +38,13 @@ section {
   }
 }
 
-.projects {
-  h2 {
-    position: relative;
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    width: 100%;
-    white-space: nowrap;
-    font-size: 28px;
-    margin: 30px 0px 80px;
-    &::after {
-      content: "";
-      display: block;
-      height: 1px;
-      width: 300px;
-      background-color: rgb(48, 60, 85);
-      position: relative;
-      top: -2px;
-      margin-left: 20px;
-    }
-  }
-}
-
 @media only screen and (max-width: 850px) {
   .btn {
     font-size: 0.8rem;
   }
-  .navbar {
-    padding: 0;
-    justify-content: space-evenly;
-    li {
-      font-size: 0.8rem;
-    }
-    i {
-      font-size: 1.3rem;
-    }
-  }
-
-  .projects {
-    margin: 0 1rem;
-  }
 }
 
 @media only screen and (max-width: 670px) {
-  .projects {
-    margin-top: 10rem;
-  }
-
-  .navbar {
-    padding: 0;
-    flex-direction: column;
-    height: 128px;
-    .nav-list li {
-      font-size: 0.8rem;
-      margin: 1rem 0.2rem;
-    }
-    i {
-      font-size: 2rem;
-      margin: 0.5rem;
-    }
-    .btn {
-      display: none;
-    }
-  }
-
-  .projects {
-    margin: 0 1rem;
-    h2 {
-      margin: 4rem 0;
-    }
-
-    .project-details {
-      .project-img {
-        grid-column: 1/-1;
-        opacity: 0.2;
-      }
-      .project-description {
-        grid-column: 1 / -1;
-        text-align: right;
-        ul {
-          justify-content: flex-end;
-        }
-      }
-    }
-  }
   .contact,
   .page-not-found {
     margin-top: 14rem;

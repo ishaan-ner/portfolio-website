@@ -17,10 +17,12 @@ const ProjectDetails = ({ project, number }) => {
 
         <div className="project-buttons">
           <a href={project.code} target="_blank" rel="noopener noreferrer">
-            <button className="btn">Code</button>
+            <button className="btn">Source Code</button>
           </a>
           <a href={project.website} target="_blank" rel="noopener noreferrer">
-            <button className="btn">Demo</button>
+            <button className="btn" id="demo">
+              Demo
+            </button>
           </a>
         </div>
       </div>

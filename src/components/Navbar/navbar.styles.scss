@@ -6,7 +6,7 @@
   width: 100%;
   height: 4rem;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   padding: 0.5rem 2rem;
 
   ul li {
@@ -19,23 +19,26 @@
     }
   }
   .social-list {
-    justify-self: flex-end;
+    margin-top: 20px;
     li {
       font-size: 2.2rem;
-      transition: all 1s ease;
+      transition: all 0.3s linear;
+      text-align: center;
+      p {
+        font-size: 10px;
+      }
       &:hover {
-        transform: scale(1.1);
         color: $text-highlight;
       }
     }
   }
   .nav-list {
-    margin: 0 auto;
     li {
       letter-spacing: 2px;
       font-size: 1rem;
       border: 1px solid transparent;
       color: $text-primary;
+      margin: 1rem 3rem;
       &:hover {
         border-bottom: 1px solid $text-highlight;
       }
@@ -44,5 +47,33 @@
 
   button {
     box-shadow: $box-shadow-small;
+  }
+
+  @media only screen and (max-width: 850px) {
+    padding: 0;
+    justify-content: space-evenly;
+    li {
+      font-size: 0.8rem;
+    }
+    i {
+      font-size: 1.3rem;
+    }
+  }
+
+  @media only screen and (max-width: 670px) {
+    padding: 0;
+    flex-direction: column;
+    height: 128px;
+    .nav-list li {
+      font-size: 0.8rem;
+      margin: 1rem;
+    }
+    i {
+      font-size: 2rem;
+      margin: 0.5rem;
+    }
+    .btn {
+      display: none;
+    }
   }
 }

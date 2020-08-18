@@ -2,6 +2,8 @@
 
 .about {
   display: flex;
+  position: relative;
+
   .about-me {
     display: flex;
     flex-direction: column;
@@ -57,19 +59,42 @@
     }
   }
 
-  @media only screen and (max-width: 850px) {
-    padding: 0 50px;
-    h1,
-    h2 {
-      font-size: 2rem;
+  .scroll-btn {
+    text-align: center;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    bottom: 10px;
+    left: 0;
+    letter-spacing: 2px;
+    cursor: pointer;
+    color: $text-primary;
+    box-shadow: $box-shadow-small;
+    padding: 10px 30px;
+    span {
+      color: $text-highlight;
     }
-    p {
-      font-size: 1rem;
+    &:hover {
+      box-shadow: $box-shadow-large;
     }
   }
 
-  @media only screen and (max-width: 670px) {
-    margin-top: 10rem;
-    justify-content: flex-start;
+  @media only screen and (max-width: 850px) {
+    padding: 0 50px;
+    flex-direction: column;
+    margin-top: 7rem;
+    .about-me,
+    .about-buttons {
+      width: 100%;
+      align-items: center;
+    }
+
+    h1 {
+      font-size: 2rem;
+      text-align: center;
+    }
+    p {
+      font-size: 1.2rem;
+    }
   }
 }
