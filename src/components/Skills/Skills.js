@@ -22,12 +22,14 @@ const Skills = ({ scrollTop }) => {
 
   return (
     <section className="skills" id="skills">
-      <div className="scroll-btn" onClick={scrollTop}>
+      {/* <div className="scroll-btn" onClick={scrollTop}>
         Home
         <span>
           <i className="fas fa-chevron-up"></i>
         </span>
-      </div>
+      </div> */}
+
+      <h1>My tech-stack includes...</h1>
 
       <div className="svg-grid">
         {svgArray.map((item, index) => (

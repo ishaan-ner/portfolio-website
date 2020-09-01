@@ -2,25 +2,30 @@
 
 .skills {
   height: 100vh;
+  padding-top: 100px;
 
-  .scroll-btn {
+  h1 {
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    letter-spacing: 2px;
-    cursor: pointer;
-    width: 120px;
-    margin: 0 0 50px auto;
-    color: $text-primary;
-    box-shadow: $box-shadow-small;
-    padding: 10px 30px;
-    span {
-      color: $text-highlight;
-    }
-    &:hover {
-      box-shadow: $box-shadow-large;
-    }
   }
+
+  // .scroll-btn {
+  //   text-align: center;
+  //   display: flex;
+  //   flex-direction: column;
+  //   letter-spacing: 2px;
+  //   cursor: pointer;
+  //   width: 120px;
+  //   margin: 0 0 50px auto;
+  //   color: $text-primary;
+  //   box-shadow: $box-shadow-small;
+  //   padding: 10px 30px;
+  //   span {
+  //     color: $text-highlight;
+  //   }
+  //   &:hover {
+  //     box-shadow: $box-shadow-large;
+  //   }
+  // }
 
   .svg-grid {
     display: flex;

@@ -4,7 +4,7 @@ import "./about.styles.scss";
 
 const About = ({ scrollBottom }) => {
   return (
-    <section className="about">
+    <section className="about" id="about">
       <div className="about-me">
         <h1>Hi, I'm</h1>
         <h1>Ishaan Nerurkar</h1>
@@ -31,12 +31,12 @@ const About = ({ scrollBottom }) => {
           </button>
         </a>
       </div>
-      <div className="scroll-btn" onClick={scrollBottom}>
+      {/* <div className="scroll-btn" onClick={scrollBottom}>
         Skills
         <span>
           <i className="fas fa-chevron-down"></i>
         </span>
-      </div>
+      </div> */}
     </section>
   );
 };

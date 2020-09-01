@@ -59,25 +59,25 @@
     }
   }
 
-  .scroll-btn {
-    text-align: center;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    bottom: 10px;
-    left: 0;
-    letter-spacing: 2px;
-    cursor: pointer;
-    color: $text-primary;
-    box-shadow: $box-shadow-small;
-    padding: 10px 30px;
-    span {
-      color: $text-highlight;
-    }
-    &:hover {
-      box-shadow: $box-shadow-large;
-    }
-  }
+  // .scroll-btn {
+  //   text-align: center;
+  //   position: absolute;
+  //   display: flex;
+  //   flex-direction: column;
+  //   bottom: 10px;
+  //   left: 0;
+  //   letter-spacing: 2px;
+  //   cursor: pointer;
+  //   color: $text-primary;
+  //   box-shadow: $box-shadow-small;
+  //   padding: 10px 30px;
+  //   span {
+  //     color: $text-highlight;
+  //   }
+  //   &:hover {
+  //     box-shadow: $box-shadow-large;
+  //   }
+  // }
 
   @media only screen and (max-width: 850px) {
     padding: 0 50px;
